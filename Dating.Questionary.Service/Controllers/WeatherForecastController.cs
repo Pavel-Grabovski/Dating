@@ -1,4 +1,4 @@
-namespace Dating.Questionnaire.Service.Controllers;
+namespace Dating.Questionnaire.API.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
