@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace Dating.Questionnaire.Service.Controllers;
 [ApiController]
 [Route("[controller]")]
