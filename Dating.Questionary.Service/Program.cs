@@ -1,4 +1,3 @@
-
 namespace Dating.Questionary.Service;
 
 public class Program
@@ -9,9 +8,8 @@ public class Program
 
         // Add services to the container.
 
-        builder.Services.AddControllers();
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        builder.Services.AddOpenApi();
+        builder.Services
+            .AddAPIServices(builder.Configuration);
 
         var app = builder.Build();
 
@@ -19,14 +17,11 @@ public class Program
         if (app.Environment.IsDevelopment())
         {
             app.MapOpenApi();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
-
-        app.UseAuthorization();
-
-
-        app.MapControllers();
+        app.UseAPIServices();
 
         app.Run();
     }
