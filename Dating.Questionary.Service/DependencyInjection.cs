@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Dating.Questionary.Service;
+﻿namespace Dating.Questionnaire.Service;
 
 public static class DependencyInjection
 {

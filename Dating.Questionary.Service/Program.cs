@@ -1,4 +1,4 @@
-namespace Dating.Questionary.Service;
+namespace Dating.Questionnaire.Service;
 
 public class Program
 {
