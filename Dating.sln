@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.APIGateway", "Dating.APIGateway\Dating.APIGateway.csproj", "{A48A4651-60CA-49ED-929D-CD28A7529613}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Questionnaire.API", "Dating.Questionary.Service\Dating.Questionnaire.API.csproj", "{60C97BF1-4E30-4C39-963D-96687B71C277}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Questionnaire.API", "Dating.Questionnaire.API\Dating.Questionnaire.API.csproj", "{60C97BF1-4E30-4C39-963D-96687B71C277}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared", "Dating.Shared\Dating.Shared.csproj", "{264670BA-C74E-4048-A4D9-E6E1F9C385C8}"
 EndProject
