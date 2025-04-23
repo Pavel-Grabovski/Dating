@@ -2,16 +2,16 @@ using Dating.Shared.Controllers;
 
 namespace Dating.Profile.API.Controllers;
 
-public class WeatherForecastController : DatingControllerBase
+public class PreferencesController : DatingControllerBase
 {
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<PreferencesController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public PreferencesController(ILogger<PreferencesController> logger)
     {
         _logger = logger;
     }
