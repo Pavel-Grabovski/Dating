@@ -7,7 +7,7 @@ namespace Dating.Shared.Controllers;
 [Route("[controller]")]
 public class DatingControllerBase : ControllerBase
 {
-    private IMediator _mediator;
+    private IMediator _mediator = default!;
     protected IMediator Mediator => _mediator ??=
         HttpContext!.RequestServices.GetService<IMediator>()!;
 

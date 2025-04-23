@@ -1,4 +1,4 @@
-namespace Dating.Questionnaire.API;
+namespace Dating.Profile.API;
 
 public class WeatherForecast
 {
