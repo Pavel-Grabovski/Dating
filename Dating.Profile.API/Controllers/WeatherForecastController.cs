@@ -1,7 +1,8 @@
+using Dating.Shared.Controllers;
+
 namespace Dating.Profile.API.Controllers;
-[ApiController]
-[Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+
+public class WeatherForecastController : DatingControllerBase
 {
     private static readonly string[] Summaries = new[]
     {

@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Dating.Shared.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class DatingControllerBase : ControllerBase
 {
     private IMediator _mediator = default!;
