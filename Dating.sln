@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Authentication.Appli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Authentication.Infrastructure", "Dating.Authentication.Infrastructure\Dating.Authentication.Infrastructure.csproj", "{18283958-3996-478E-8BAF-0B5487A227FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared", "Dating.Shared\Dating.Shared.csproj", "{264670BA-C74E-4048-A4D9-E6E1F9C385C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,14 @@ Global
 		{18283958-3996-478E-8BAF-0B5487A227FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18283958-3996-478E-8BAF-0B5487A227FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18283958-3996-478E-8BAF-0B5487A227FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C97BF1-4E30-4C39-963D-96687B71C277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C97BF1-4E30-4C39-963D-96687B71C277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C97BF1-4E30-4C39-963D-96687B71C277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C97BF1-4E30-4C39-963D-96687B71C277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
