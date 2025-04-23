@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dating.Profile.DB\Dating.Profile.DB.csproj" />
     <ProjectReference Include="..\Dating.Shared\Dating.Shared.csproj" />
   </ItemGroup>
 

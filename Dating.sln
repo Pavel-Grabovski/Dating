@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.API", "Datin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared", "Dating.Shared\Dating.Shared.csproj", "{264670BA-C74E-4048-A4D9-E6E1F9C385C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.DB", "Dating.Profile.DB\Dating.Profile.DB.csproj", "{DE58795A-55DA-4427-801C-E2949F79403E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE58795A-55DA-4427-801C-E2949F79403E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE58795A-55DA-4427-801C-E2949F79403E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE58795A-55DA-4427-801C-E2949F79403E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE58795A-55DA-4427-801C-E2949F79403E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
