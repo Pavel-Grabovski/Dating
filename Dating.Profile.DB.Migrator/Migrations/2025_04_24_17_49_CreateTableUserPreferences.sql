@@ -1,9 +1,9 @@
-CREATE TABLE user_preferences
+CREATE TABLE "UserPreferences"
 (
-    id uuid NOT NULL,
-    gender gender,
-    year_birth_from integer NOT NULL CHECK (year_birth_from > 1900),
-    year_birth_to integer NOT NULL CHECK (year_birth_to > 3000),
-    search_radius integer NOT NULL CHECK (search_radius > 0),
-    having_children bool
-)
+    "UserId" uuid NOT NULL,
+    "Gender" "Gender",
+    "YearBirthFrom" integer NOT NULL CHECK ("YearBirthFrom" > 1900),
+    "YearBirthTo" integer NOT NULL CHECK ("YearBirthTo" > 3000),
+    "SearchRadius" integer NOT NULL CHECK ("SearchRadius" > 0),
+    "HavingChildren" bool
+);
