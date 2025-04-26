@@ -29,43 +29,23 @@ param (
 
 function Execute-Sql {
     param (
-        [string]$sql,
-        [bool]$isQuery = $false
+		[Parameter(Mandatory=$true)]
+        [string]$sql
     )
-    
-    try {
-        $env:PGPASSWORD = $Password
-        if ($isQuery) {
-            $result = psql -h $DbHost -p $DbPort -U $Username -d $Database -t -c $sql
-			
-            return $result
-        }
-        else {
-            # Используем -f для файлов или -c для простых команд
-            if ($sql -match "\\") {
-                # Для многострочных команд используем временный файл
-                $tempFile = [System.IO.Path]::GetTempFileName()
-                $sql | Out-File -FilePath $tempFile -Encoding utf8
-                $output = psql -h $DbHost -p $DbPort -U $Username -d $Database -f $tempFile
-                Remove-Item $tempFile
-            }
-            else {
-                $output = psql -h $DbHost -p $DbPort -U $Username -d $Database -c $sql
-            }
-            
-            if ($LASTEXITCODE -ne 0) {
-                throw "SQL execution failed with code $LASTEXITCODE"
-            }
-            return $output
-        }
-    }
-    finally {
-        Remove-Item env:PGPASSWORD -ErrorAction SilentlyContinue
-    }
+	$result = psql -h $DbHost -p $DbPort -U $Username -d $Database -t -c $sql
+
+	if ($LASTEXITCODE -ne 0) {
+		Write-Error "11"
+		throw "SQL execution failed with code $LASTEXITCODE"
+	}
+	else
+	{
+		return $result
+	}
+	return $result
 }
 
-
-function Get-String-FROM-File {
+function Get_SQL_String_From_File {
     param (
         [Parameter(Mandatory=$true)]
         [string]$FilePath
@@ -74,14 +54,20 @@ function Get-String-FROM-File {
     # Проверка существования файла
     if (-not (Test-Path -Path $FilePath -PathType Leaf)) {
         Write-Error "Файл '$FilePath' не существует или недоступен"
-        return $null
+		throw  "The file '$FilePath' does not exist or is inaccessible."
     }
-
+	
     # Чтение содержимого файла
     $content = Get-Content -Path $FilePath -Raw
-
-    return $content  # Возвращаем все строки если номер не указан
+	
+	$trimmedStr = $content.Trim()  # Удаляет пробелы и переносы строк в начале и конце
+	if (-not $trimmedStr.EndsWith(';')) {
+		throw  "The last character in the SQL file must be ';'."
+	}
+	
+    return $content 
 }
+
 
 
 # Проверка наличия psql
@@ -108,7 +94,7 @@ CREATE TABLE IF NOT EXISTS schema_version (
 "@
 
 Write-Host "Initializing migration tracking system..."
-Execute-Sql $createTableSql | Out-Null
+Execute-Sql $createTableSql
 
 # Получаем миграции
 $migrationFiles = Get-ChildItem -Path $MigrationsPath -Filter "*.sql" | Sort-Object Name
@@ -129,7 +115,7 @@ foreach ($file in $migrationFiles) {
     
     # Проверка существующей миграции
     $checkSql = "SELECT 1 FROM schema_version WHERE migration_name = '$migrationName'"
-    $alreadyApplied = Execute-Sql $checkSql $true
+    $alreadyApplied = Execute-Sql $checkSql
     
     if ($alreadyApplied) {
         Write-Host "[SKIPPED] $migrationName (already applied)" -ForegroundColor Yellow
@@ -139,33 +125,32 @@ foreach ($file in $migrationFiles) {
     
 	
     try {
-		# Создание транзакции
-		Execute-Sql "BEGIN;" | Out-Null
-		
-		# Получаем строку запроса из файла			
-		Write-Host "[READ FILE]" $file.FullName -ForegroundColor Cyan
-		$stringSQL = Get-String-FROM-File $file.FullName	
-		Write-Host $stringSQL -ForegroundColor DarkYellow
-		
 		
 		# Применяем миграцию из файла
-		Write-Host "[APPLYING]" $file.FullName -ForegroundColor Cyan
-        $output = Execute-Sql $stringSQL
+		Write-Host "[APPLYING]" $file.FullName -ForegroundColor Cyan		
 		
+        # Формирование строки запроса, где будет записана миграция в таблицу
+        $recordSql = "INSERT INTO schema_version (migration_name, checksum) VALUES ('$migrationName', '$checksum');"
 		
-        # Записываем в историю
-        $recordSql = "INSERT INTO schema_version (migration_name, checksum) VALUES ('$migrationName', '$checksum')"
-        Execute-Sql $recordSql | Out-Null
-        
+		$file_SQL = Get_SQL_String_From_File($file.FullName);
+
+		# Сформированый запрос вместе:
+		# 1. C открытие транзакцией;
+		# 2. Строкой запроса из файла миграции
+		# 3. Записью таблиы миграции
+		# 4. C комитом транзакции;
 		
-		# Подтверждаем все внесенные изменения
-        Execute-Sql "COMMIT;" | Out-Null
+		$request = "BEGIN;`n${file_SQL}`n${recordSql}`nCOMMIT;"
+		Write-Host $request -ForegroundColor DarkYellow		
+				
+        Execute-Sql $request
+		
         Write-Host "[SUCCESS] Applied $migrationName" -ForegroundColor Green
         $appliedCount++
     }
     catch {
 		# Откат транзакции
-        Execute-Sql "ROLLBACK;" | Out-Null
+        Execute-Sql "ROLLBACK;"
         Write-Host "[FAILED] Error applying $migrationName" -ForegroundColor Red
         Write-Error $_.Exception.Message
         exit 1
