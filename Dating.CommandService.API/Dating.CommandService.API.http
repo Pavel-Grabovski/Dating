@@ -1,0 +1,6 @@
+@Dating.CommandService.API_HostAddress = http://localhost:5269
+
+GET {{Dating.CommandService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

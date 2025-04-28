@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.Domain"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.Infrastructure", "Dating.QueryService.Infrastructure\Dating.QueryService.Infrastructure.csproj", "{E606276D-E57C-40BF-80C7-A14C693543ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.CommandService.API", "Dating.CommandService.API\Dating.CommandService.API.csproj", "{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.CommandService.Domain", "Dating.CommandService.Domain\Dating.CommandService.Domain.csproj", "{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.CommandService.Infrastructure", "Dating.CommandService.Infrastructure\Dating.CommandService.Infrastructure.csproj", "{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,18 @@ Global
 		{E606276D-E57C-40BF-80C7-A14C693543ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E606276D-E57C-40BF-80C7-A14C693543ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E606276D-E57C-40BF-80C7-A14C693543ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
