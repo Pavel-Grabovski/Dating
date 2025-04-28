@@ -1,6 +1,6 @@
 ﻿namespace Dating.Profile.CommandService.API.Profile.Commands;
 
-public class DeleteProfileCommand : BaseCommand
+public class DeleteUserProfileCommand : BaseCommand
 {
     //TODO Add field
 }
