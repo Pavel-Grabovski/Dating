@@ -1,4 +1,4 @@
-﻿namespace Dating.CommandService.API.Premium;
+﻿namespace Dating.Profile.CommandService.API.Premium;
 
 public class ActivePremiumCommand : BaseCommand
 {
