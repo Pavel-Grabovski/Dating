@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.APIGateway", "Dating
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared", "Dating.Shared\Dating.Shared.csproj", "{264670BA-C74E-4048-A4D9-E6E1F9C385C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.API", "Dating.QueryService.API\Dating.QueryService.API.csproj", "{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.Domain", "Dating.QueryService.Domain\Dating.QueryService.Domain.csproj", "{281CFCB0-7E86-473A-978E-588FE9504527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.Infrastructure", "Dating.QueryService.Infrastructure\Dating.QueryService.Infrastructure.csproj", "{E606276D-E57C-40BF-80C7-A14C693543ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{281CFCB0-7E86-473A-978E-588FE9504527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281CFCB0-7E86-473A-978E-588FE9504527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281CFCB0-7E86-473A-978E-588FE9504527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281CFCB0-7E86-473A-978E-588FE9504527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E606276D-E57C-40BF-80C7-A14C693543ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E606276D-E57C-40BF-80C7-A14C693543ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E606276D-E57C-40BF-80C7-A14C693543ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E606276D-E57C-40BF-80C7-A14C693543ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
