@@ -1,4 +1,4 @@
-﻿namespace Dating.Profile.CommandService.API.Location.Commands;
+﻿namespace Dating.Profile.CommandService.API.UserLocation.Commands;
 
 public class UpdateUserLocationCommand : BaseCommand
 {
