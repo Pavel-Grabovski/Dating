@@ -7,17 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.APIGateway", "Dating
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared", "Dating.Shared\Dating.Shared.csproj", "{264670BA-C74E-4048-A4D9-E6E1F9C385C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.API", "Dating.QueryService.API\Dating.QueryService.API.csproj", "{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.QueryService.API", "Dating.Profile.QueryService.API\Dating.Profile.QueryService.API.csproj", "{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.Domain", "Dating.QueryService.Domain\Dating.QueryService.Domain.csproj", "{281CFCB0-7E86-473A-978E-588FE9504527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.QueryService.Domain", "Dating.Profile.QueryService.Domain\Dating.Profile.QueryService.Domain.csproj", "{281CFCB0-7E86-473A-978E-588FE9504527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.QueryService.Infrastructure", "Dating.QueryService.Infrastructure\Dating.QueryService.Infrastructure.csproj", "{E606276D-E57C-40BF-80C7-A14C693543ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.QueryService.Infrastructure", "Dating.Profile.QueryService.Infrastructure\Dating.Profile.QueryService.Infrastructure.csproj", "{E606276D-E57C-40BF-80C7-A14C693543ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.CommandService.API", "Dating.CommandService.API\Dating.CommandService.API.csproj", "{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.API", "Dating.Profile.CommandService.API\Dating.Profile.CommandService.API.csproj", "{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.CommandService.Domain", "Dating.CommandService.Domain\Dating.CommandService.Domain.csproj", "{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.Domain", "Dating.Profile.CommandService.Domain\Dating.Profile.CommandService.Domain.csproj", "{A88C9E1C-C208-49A3-BE42-7CBA0F5E1D85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.CommandService.Infrastructure", "Dating.CommandService.Infrastructure\Dating.CommandService.Infrastructure.csproj", "{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.Infrastructure", "Dating.Profile.CommandService.Infrastructure\Dating.Profile.CommandService.Infrastructure.csproj", "{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
