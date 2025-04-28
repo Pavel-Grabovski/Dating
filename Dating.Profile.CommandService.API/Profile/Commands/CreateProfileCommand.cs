@@ -1,6 +1,6 @@
 ﻿namespace Dating.Profile.CommandService.API.Profile.Commands;
 
-public class CreateProfileService : BaseCommand
+public class CreateProfileCommand : BaseCommand
 {
     //TODO Add field
 }
