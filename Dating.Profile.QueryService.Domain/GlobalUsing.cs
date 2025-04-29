@@ -1,0 +1,1 @@
+﻿global using Dating.Profile.QueryService.Domain.Enum;
