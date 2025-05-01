@@ -15,4 +15,6 @@ public class UserProfile
     public required Point Location { get; set; }
 
     public DateTime WasOnline { get; set; }
+
+    public UserPreferences Preferences { get; set; } = default!;
 }
