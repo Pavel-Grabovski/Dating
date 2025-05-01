@@ -13,4 +13,8 @@ public class UserProfile
     public int SearchRadius { get; set; }
 
     public bool HaveChildren { get; set; }
+
+    public required Point Location { get; set; }
+
+    public DateTime WasOnline { get; set; }
 }
