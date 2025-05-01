@@ -11,8 +11,13 @@ public static class DependencyInjection
 
         services.AddDbContext<ApplicationDBContext>(options =>
         {
-            options.UseNpgsql(connectionString, 
-                o => o.MapEnum<Gender>("gender"));
+            options.UseNpgsql(connectionString, o =>
+            {
+                
+                o.MapEnum<Gender>("gender");
+                o.UseNetTopologySuite();
+            });
+
         });
         return services;
     }
