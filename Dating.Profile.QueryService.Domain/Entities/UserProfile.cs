@@ -10,8 +10,6 @@ public class UserProfile
 
     public DateOnly Birthday { get; set; }
 
-    public int SearchRadius { get; set; }
-
     public bool HaveChildren { get; set; }
 
     public required Point Location { get; set; }
