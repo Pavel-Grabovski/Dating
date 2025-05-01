@@ -17,4 +17,6 @@ public class UserProfile
     public DateTime WasOnline { get; set; }
 
     public UserPreferences Preferences { get; set; } = default!;
+
+    public PremiumSubscription PremiumSubscription { get; set; } = default!;
 }

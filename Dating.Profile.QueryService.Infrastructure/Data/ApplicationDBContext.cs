@@ -4,6 +4,7 @@ public class ApplicationDBContext : DbContext
 {
     public DbSet<UserProfile> UserProfiles { get; set; }
     public DbSet<UserPreferences> UsersPreferences { get; set; }
+    public DbSet<PremiumSubscription> PremiumSubscriptions { get; set; }
 
     public ApplicationDBContext(DbContextOptions options)
         : base(options) 
@@ -26,6 +27,10 @@ public class ApplicationDBContext : DbContext
                 .WithOne(p => p.UserProfile)
                 .HasForeignKey<UserPreferences>(p => p.UserId);
 
+            entity.HasOne(u => u.PremiumSubscription)
+                .WithOne(p => p.Owner)
+                .HasForeignKey<PremiumSubscription>(p => p.UserId);
+
             entity.ToTable(t => t.HasCheckConstraint("CK_Valid_Birthday", "\"Birthday\" >= '1900-01-01' AND \"Birthday\" <= current_date"));
         });
 
@@ -37,6 +42,12 @@ public class ApplicationDBContext : DbContext
             entity.HasKey(p => p.UserId);
 
             entity.ToTable(t => t.HasCheckConstraint("CK_SearchRadius_Greater_Zero", "\"SearchRadius\" > 0"));
+        });
+
+        builder.Entity<PremiumSubscription>(entity =>
+        {
+            entity.HasKey(p => p.UserId);
+            entity.ToTable(t => t.HasCheckConstraint("CK_Valid_EndTime", "\"EndTime\" > NOW()"));
         });
 
 
