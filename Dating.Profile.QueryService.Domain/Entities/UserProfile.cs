@@ -16,6 +16,9 @@ public class UserProfile
 
     public DateTime WasOnline { get; set; }
 
+    public bool IsDelete { get; set; }
+    public DateTime? DeletionTime { get; set; }
+
     public UserSearchFilters Preferences { get; set; } = default!;
 
     public PremiumSubscription PremiumSubscription { get; set; } = default!;
