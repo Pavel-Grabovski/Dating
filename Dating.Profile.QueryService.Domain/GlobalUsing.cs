@@ -1,2 +1,2 @@
-﻿global using Dating.Profile.QueryService.Domain.Enum;
+﻿global using Dating.Profile.Core.Enum;
 global using NetTopologySuite.Geometries;

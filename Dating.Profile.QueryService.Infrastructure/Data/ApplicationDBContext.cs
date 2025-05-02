@@ -32,6 +32,7 @@ public class ApplicationDBContext : DbContext
                 .HasForeignKey<PremiumSubscription>(p => p.UserId);
 
             entity.ToTable(t => t.HasCheckConstraint("CK_Valid_Birthday", "\"Birthday\" >= '1900-01-01' AND \"Birthday\" <= current_date"));
+            entity.ToTable(t => t.HasCheckConstraint("CK_Valid_Gender", "\"Gender\" IN ('man', 'woman')"));
         });
 
         builder.HasPostgresExtension("postgis");
