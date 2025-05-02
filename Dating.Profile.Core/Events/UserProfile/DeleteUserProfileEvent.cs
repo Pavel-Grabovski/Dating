@@ -1,4 +1,4 @@
-﻿namespace Dating.Profile.Core.Events;
+﻿namespace Dating.Profile.Core.Events.UserProfile;
 
 public class DeleteUserProfileEvent : BaseEvent
 {

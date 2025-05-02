@@ -1,6 +1,6 @@
-﻿namespace Dating.Profile.Core.Events;
+﻿namespace Dating.Profile.Core.Events.UserProfile;
 
-public class UpdateUserProfileEvent : BaseEvent
+public class CreateUserProfileEvent : BaseEvent
 {
     public required Guid UserId { get; set; }
 
@@ -16,8 +16,7 @@ public class UpdateUserProfileEvent : BaseEvent
 
     public DateTime WasOnline { get; set; } = DateTime.UtcNow;
 
-
-    public UpdateUserProfileEvent() : base(nameof(UpdateUserProfileEvent))
+    public CreateUserProfileEvent() : base(nameof(CreateUserProfileEvent))
     {
     }
 }
