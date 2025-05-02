@@ -1,6 +1,6 @@
 ﻿namespace Dating.Profile.QueryService.Domain.Entities;
 
-public class UserPreferences
+public class UserSearchFilters
 {
     public Guid UserId { get; set; }
 

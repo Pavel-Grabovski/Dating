@@ -3,7 +3,7 @@
 public class ApplicationDBContext : DbContext
 {
     public DbSet<UserProfile> UserProfiles { get; set; }
-    public DbSet<UserPreferences> UsersPreferences { get; set; }
+    public DbSet<UserSearchFilters> UsersPreferences { get; set; }
     public DbSet<PremiumSubscription> PremiumSubscriptions { get; set; }
 
     public ApplicationDBContext(DbContextOptions options)
@@ -25,7 +25,7 @@ public class ApplicationDBContext : DbContext
         {
             entity.HasOne(u => u.Preferences)
                 .WithOne(p => p.UserProfile)
-                .HasForeignKey<UserPreferences>(p => p.UserId);
+                .HasForeignKey<UserSearchFilters>(p => p.UserId);
 
             entity.HasOne(u => u.PremiumSubscription)
                 .WithOne(p => p.Owner)
@@ -37,7 +37,7 @@ public class ApplicationDBContext : DbContext
         builder.HasPostgresExtension("postgis");
 
 
-        builder.Entity<UserPreferences>(entity =>
+        builder.Entity<UserSearchFilters>(entity =>
         {
             entity.HasKey(p => p.UserId);
 
