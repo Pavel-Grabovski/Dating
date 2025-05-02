@@ -12,7 +12,7 @@ public class UserSearchFilters
 
     public int SearchRadius { get; set; }
 
-    public bool HaveChildren { get; set; }
+    public bool? HaveChildren { get; set; }
 
     public UserProfile UserProfile { get; set; } = default!;
 }
