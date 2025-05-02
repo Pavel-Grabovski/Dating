@@ -1,4 +1,4 @@
-﻿namespace Dating.Shared.Event;
+﻿namespace Dating.Shared.Events;
 
 public abstract class BaseEvent : Message
 {
