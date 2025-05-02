@@ -3,7 +3,7 @@
 public class ApplicationDBContext : DbContext
 {
     public DbSet<UserProfile> UserProfiles { get; set; }
-    public DbSet<UserSearchFilters> UsersPreferences { get; set; }
+    public DbSet<UserSearchFilters> UsersSearchFilters { get; set; }
     public DbSet<PremiumSubscription> PremiumSubscriptions { get; set; }
 
     public ApplicationDBContext(DbContextOptions options)
