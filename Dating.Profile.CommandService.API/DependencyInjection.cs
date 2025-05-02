@@ -12,6 +12,8 @@ public static class DependencyInjection
             .UseLightweightSessions();
 
         services.AddScoped<IEventStorage, EventStorage>();
+        services.AddScoped<IEventService, EventService>();
+
         services.AddControllers();
         services.AddOpenApi();
 

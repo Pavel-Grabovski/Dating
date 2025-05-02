@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dating.Profile.CommandService.Infrastructure\Dating.Profile.CommandService.Infrastructure.csproj" />
     <ProjectReference Include="..\Dating.Shared\Dating.Shared.csproj" />
   </ItemGroup>
 
