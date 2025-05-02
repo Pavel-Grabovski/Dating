@@ -1,4 +1,3 @@
-
 namespace Dating.CommandService.API;
 
 public class Program
@@ -7,11 +6,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-
-        builder.Services.AddControllers();
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        builder.Services.AddOpenApi();
+        builder.Services.AddCommandServices(builder.Configuration);
 
         var app = builder.Build();
 
