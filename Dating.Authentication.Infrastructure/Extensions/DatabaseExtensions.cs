@@ -1,6 +1,6 @@
 ﻿namespace Dating.Authentication.Infrastructure.Extensions;
 
-public static class IdentityOptionExtension
+public static class DatabaseExtensions
 {
     public static IServiceCollection AddIdentityServices(
         this IServiceCollection services,
@@ -39,4 +39,5 @@ public static class IdentityOptionExtension
 
         return services;
     }
+
 }
