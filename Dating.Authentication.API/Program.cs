@@ -8,14 +8,11 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services
-            .AddAPIServices(builder.Configuration);
+            .AddAPIServices(builder.Configuration)
+            .AddInfrastructureServices(builder.Configuration);
 
         var app = builder.Build();
 
-        if (app.Environment.IsDevelopment())
-        {
-            app.MapOpenApi();
-        }
 
 
         app.UseAPIServices();
