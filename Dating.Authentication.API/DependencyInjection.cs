@@ -13,6 +13,10 @@ public static class DependencyInjection
         services.AddRouting(options => options.LowercaseUrls = true);
 
         services.AddOpenApi();
+
+        services.AddMediatR(config =>
+            config.RegisterServicesFromAssembly(typeof(RegisterHandler).Assembly));
+
         return services;
     }
 
