@@ -7,6 +7,8 @@ global using Dating.Authentication.Infrastructure.Data;
 global using Dating.Authentication.Infrastructure.Extensions;
 global using Dating.Authentication.Infrastructure.Services;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Identity;
 global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;

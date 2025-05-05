@@ -40,4 +40,18 @@ public static class DatabaseExtensions
         return services;
     }
 
+    public static async Task InitializeDatabaseAsync(this WebApplication app)
+    {
+        using IServiceScope scope = app.Services.CreateScope();
+
+        AuthenticationDbContext dbContext = scope.ServiceProvider
+            .GetRequiredService<AuthenticationDbContext>();
+
+        UserManager<User> manager = scope
+            .ServiceProvider
+            .GetRequiredService<UserManager<User>>();
+
+        await dbContext.Database
+            .MigrateAsync();
+    }
 }
