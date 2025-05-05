@@ -12,4 +12,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dating.Authentication.Application\Dating.Authentication.Application.csproj" />
+    <ProjectReference Include="..\Dating.Authentication.Domain\Dating.Authentication.Domain.csproj" />
+    <ProjectReference Include="..\Dating.Shared\Dating.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
