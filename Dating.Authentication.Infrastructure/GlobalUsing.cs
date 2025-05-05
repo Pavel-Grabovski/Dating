@@ -4,6 +4,7 @@ global using Dating.Authentication.Application.Data;
 global using Dating.Authentication.Application.Services;
 global using Dating.Authentication.Domain.Model;
 global using Dating.Authentication.Infrastructure.Data;
+global using Dating.Authentication.Infrastructure.Extensions;
 global using Dating.Authentication.Infrastructure.Services;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
