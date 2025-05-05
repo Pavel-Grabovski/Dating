@@ -6,6 +6,7 @@ public static class DependencyInjection
         this IServiceCollection services,
         IConfiguration configuration)
     {
+        services.AddExceptionHandler<ExtensionHandler>();
         services.AddControllers();
 
         services.AddEndpointsApiExplorer();
