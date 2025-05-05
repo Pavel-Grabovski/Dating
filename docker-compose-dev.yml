@@ -1,0 +1,27 @@
+# docker compose -f docker-compose-dev.yml -p dating-dev up -d
+# docker compose -f docker-compose-dev.yml -p dating-dev down -v
+
+services:
+    authentication_db.dev:
+        container_name: authentication.db.dev
+        image: postgres:latest         
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=12345678
+            - POSTGRES_DB=authentication-db-dev
+        restart: always
+        ports:
+            - "1010:5432"
+        volumes:
+            - postgres_authentication_db:/var/lib/postgresql/data/
+        networks:
+            - dating-hub-network-dev
+        
+volumes:
+  postgres_authentication_db:
+    driver: local
+
+    
+networks:
+  dating-hub-network-dev:
+    driver: bridge
