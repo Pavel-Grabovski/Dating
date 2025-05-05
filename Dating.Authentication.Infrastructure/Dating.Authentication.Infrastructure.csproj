@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dating.Authentication.Application\Dating.Authentication.Application.csproj" />
+  </ItemGroup>
+
 </Project>
