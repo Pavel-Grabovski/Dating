@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.APIGateway", "Dating
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Authentication.API", "Dating.Authentication.API\Dating.Authentication.API.csproj", "{52BAA59B-C475-47E6-B846-D7C74C01DF94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Authentication.Domain", "Dating.Authentication.Domain\Dating.Authentication.Domain.csproj", "{DA02CC65-E7B0-4DAC-A3B4-989297D58F0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{52BAA59B-C475-47E6-B846-D7C74C01DF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52BAA59B-C475-47E6-B846-D7C74C01DF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52BAA59B-C475-47E6-B846-D7C74C01DF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA02CC65-E7B0-4DAC-A3B4-989297D58F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA02CC65-E7B0-4DAC-A3B4-989297D58F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA02CC65-E7B0-4DAC-A3B4-989297D58F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA02CC65-E7B0-4DAC-A3B4-989297D58F0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
