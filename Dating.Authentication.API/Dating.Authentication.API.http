@@ -1,0 +1,6 @@
+@Dating.Authentication.API_HostAddress = http://localhost:5010
+
+GET {{Dating.Authentication.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

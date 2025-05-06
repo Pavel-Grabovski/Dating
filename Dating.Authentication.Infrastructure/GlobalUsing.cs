@@ -1,0 +1,17 @@
+﻿global using System.Security.Claims;
+global using System.Text;
+global using Dating.Authentication.Application.Data;
+global using Dating.Authentication.Application.Services;
+global using Dating.Authentication.Domain.Model;
+global using Dating.Authentication.Infrastructure.Data;
+global using Dating.Authentication.Infrastructure.Extensions;
+global using Dating.Authentication.Infrastructure.Services;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.IdentityModel.JsonWebTokens;
+global using Microsoft.IdentityModel.Tokens;
