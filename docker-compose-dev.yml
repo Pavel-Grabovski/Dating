@@ -16,7 +16,22 @@ services:
             - postgres_authentication_db:/var/lib/postgresql/data/
         networks:
             - dating-hub-network-dev
-        
+            
+    dating-authentication-service:
+        container_name: dating.authentication.service.dev
+        build:
+            context: .
+            dockerfile: ./dating-authentication-api.dockerfile
+            args:
+                - BUILDKIT_INLINE_CACHE=0
+        ports:
+            - "1030:8080"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ConnectionStrings__PostgreSQLConnection=Host=authentication.db.dev;Database=authentication-db-dev;Username=postgres;Password=12345678
+        restart: unless-stopped
+        networks:
+            - dating-hub-network-dev
 volumes:
   postgres_authentication_db:
     driver: local
