@@ -2,6 +2,17 @@
 
 public static class DependencyInjection
 {
+    public static void AddLogger(this WebApplicationBuilder builder)
+    {
+        builder.Host.UseSerilog((context, loggerConfiguration) =>
+        {
+            loggerConfiguration.WriteTo.Console();
+            loggerConfiguration.ReadFrom.Configuration(context.Configuration)
+                .Enrich.FromLogContext()
+                .Enrich.WithProperty("WEB API NAME", "Dating.Authentication.API");
+        });
+    }
+
     public static IServiceCollection AddAPIServices(
         this IServiceCollection services,
         IConfiguration configuration)

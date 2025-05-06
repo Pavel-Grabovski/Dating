@@ -6,6 +6,8 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.AddLogger();
+
         builder.Services
             .AddAPIServices(builder.Configuration)
             .AddInfrastructureServices(builder.Configuration);
@@ -13,7 +15,7 @@ public class Program
         var app = builder.Build();
 
 
-
+        app.UseSerilogRequestLogging();
         app.UseAPIServices();
         await app.InitializeDatabaseAsync();
 
