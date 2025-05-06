@@ -1,34 +1,32 @@
+using Microsoft.AspNetCore.RateLimiting;
+namespace Dating.APIGateway;
 
-namespace Dating.APIGateway
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+        builder.Services.AddReverseProxy()
+            .LoadFromConfig(builder.Configuration.GetSection("YarpProxy"));
 
-            builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+        //builder.Services.AddRateLimiter(option =>
+        //{
+        //    option.AddFixedWindowLimiter("fixed", config =>
+        //    {
+        //        config.PermitLimit = 3;
+        //        config.Window = TimeSpan.FromSeconds(10);
+        //    });
+        //});
 
-            var app = builder.Build();
+        var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
+        //app.UseRateLimiter();
+        //app.MapReverseProxy().RequireRateLimiting("fixed");
 
-            app.UseHttpsRedirection();
+        app.MapReverseProxy();
 
-            app.UseAuthorization();
+        app.Run();
 
-
-            app.MapControllers();
-
-            app.Run();
-        }
     }
 }
