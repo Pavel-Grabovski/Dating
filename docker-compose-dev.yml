@@ -32,6 +32,23 @@ services:
         restart: unless-stopped
         networks:
             - dating-hub-network-dev
+            
+    dating-api-gateway:
+        container_name: dating.api.gateway.dev
+        build:
+            context: .
+            dockerfile: ./dating-api-gateway.dockerfile
+            args:
+                - BUILDKIT_INLINE_CACHE=0
+        ports:
+            - "1001:8080"
+        restart: unless-stopped
+        networks:
+            - dating-hub-network-dev
+            
+    
+     
+    
 volumes:
   postgres_authentication_db:
     driver: local
