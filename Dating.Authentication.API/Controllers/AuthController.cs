@@ -1,14 +1,7 @@
 namespace Dating.Authentication.API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class AuthController : ControllerBase
+public class AuthController : DatingControllerBase
 {
-    private IMediator _mediator = default!;
-    protected IMediator Mediator => _mediator ??=
-        HttpContext!.RequestServices.GetService<IMediator>()!;
-
-
     [HttpPost("login")]
     public async Task<IResult> Login(LoginRequestDTO dto, CancellationToken cancellationToken)
     {
