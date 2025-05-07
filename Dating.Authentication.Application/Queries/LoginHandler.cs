@@ -1,4 +1,6 @@
-﻿namespace Dating.Authentication.Application.Queries;
+﻿using Dating.Shared.Application.SQRS;
+
+namespace Dating.Authentication.Application.Queries;
 
 public class LoginHandler(
     UserManager<User> userManager,

@@ -1,4 +1,4 @@
-﻿namespace Dating.Shared.SQRS;
+﻿namespace Dating.Shared.Application.SQRS;
 
 public interface ICommandHandler<in TCommand, TResponse>
     : IRequestHandler<TCommand, TResponse>

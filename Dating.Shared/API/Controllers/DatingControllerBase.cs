@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dating.Shared.Controllers;
+namespace Dating.Shared.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
