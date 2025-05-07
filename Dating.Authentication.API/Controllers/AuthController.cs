@@ -1,5 +1,6 @@
 namespace Dating.Authentication.API.Controllers;
 
+[Route("api/[controller]")]
 public class AuthController : DatingControllerBase
 {
     [HttpPost("login")]

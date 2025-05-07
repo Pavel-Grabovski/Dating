@@ -1,7 +1,6 @@
 ﻿namespace Dating.Shared.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
 public class DatingControllerBase : ControllerBase
 {
     private IMediator _mediator = default!;
