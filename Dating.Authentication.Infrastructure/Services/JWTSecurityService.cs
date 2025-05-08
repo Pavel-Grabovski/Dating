@@ -26,7 +26,7 @@ public class JWTSecurityService(IConfiguration configuration)
             Subject = new ClaimsIdentity(claims),
             IssuedAt = DateTime.UtcNow,
             NotBefore = DateTime.UtcNow.AddMinutes(0),
-            Expires = DateTime.UtcNow.AddMinutes(15),
+            Expires = DateTime.UtcNow.AddDays(30),
         };
 
         string token = tokenHandler.CreateToken(tokenDescriptor);
