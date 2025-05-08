@@ -1,4 +1,4 @@
-﻿namespace Dating.Profile.QueryService.Domain.Entities;
+﻿namespace Dating.Profile.Domain.Entities;
 
 public class PremiumSubscription
 {

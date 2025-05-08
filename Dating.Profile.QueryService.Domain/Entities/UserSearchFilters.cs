@@ -1,4 +1,6 @@
-﻿namespace Dating.Profile.QueryService.Domain.Entities;
+﻿using Dating.Profile.Domain.Enum;
+
+namespace Dating.Profile.Domain.Entities;
 
 public class UserSearchFilters
 {

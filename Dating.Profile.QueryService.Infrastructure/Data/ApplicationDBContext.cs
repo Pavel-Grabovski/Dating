@@ -1,4 +1,7 @@
-﻿namespace Dating.Profile.QueryService.Infrastructure.Data;
+﻿using Dating.Profile.Domain.Entities;
+using Dating.Profile.Domain.Enum;
+
+namespace Dating.Profile.QueryService.Infrastructure.Data;
 
 public class ApplicationDBContext : DbContext
 {
