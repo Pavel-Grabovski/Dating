@@ -4,3 +4,6 @@ global using Dating.Shared.Commands;
 global using Marten;
 global using Microsoft.AspNetCore.Mvc;
 global using Serilog;
+global using Dating.Shared.API.Middleware;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc.Authorization;
