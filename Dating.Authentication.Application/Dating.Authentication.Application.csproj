@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dating.Authentication.Domain\Dating.Authentication.Domain.csproj" />
+    <ProjectReference Include="..\Dating.Shared.Application\Dating.Shared.Application.csproj" />
     <ProjectReference Include="..\Dating.Shared\Dating.Shared.csproj" />
   </ItemGroup>
 
