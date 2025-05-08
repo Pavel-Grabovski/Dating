@@ -21,7 +21,10 @@ public static class DependencyInjection
         services
             .AddMarten(opt => opt.Connection(connectionString))
             .UseLightweightSessions();
-        
+
+        services.AddMediatR(config =>
+           config.RegisterServicesFromAssembly(typeof(CreateUserProfileHandler).Assembly));
+
         return services;
     }
 }
