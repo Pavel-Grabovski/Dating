@@ -2,6 +2,17 @@
 
 public static class DependencyInjection
 {
+    public static void AddLogger(this WebApplicationBuilder builder)
+    {
+        builder.Host.UseSerilog((context, loggerConfiguration) =>
+        {
+            loggerConfiguration.WriteTo.Console();
+            loggerConfiguration.ReadFrom.Configuration(context.Configuration)
+                .Enrich.FromLogContext()
+                .Enrich.WithProperty("WEB API NAME", "Dating.Profile.CommandService.API");
+        });
+    }
+
     public static IServiceCollection AddCommandServices(
         this IServiceCollection services, IConfiguration configuration
     )
@@ -11,8 +22,6 @@ public static class DependencyInjection
             .AddMarten(opt => opt.Connection(connectionString))
             .UseLightweightSessions();
 
-        services.AddScoped<IEventStorage, EventStorage>();
-        services.AddScoped<IEventService, EventService>();
 
         services.AddControllers();
         services.AddOpenApi();

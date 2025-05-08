@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Dating.Authentication.Application\Dating.Authentication.Application.csproj" />
     <ProjectReference Include="..\Dating.Authentication.Domain\Dating.Authentication.Domain.csproj" />
     <ProjectReference Include="..\Dating.Authentication.Infrastructure\Dating.Authentication.Infrastructure.csproj" />
+    <ProjectReference Include="..\Dating.Shared.API\Dating.Shared.API.csproj" />
     <ProjectReference Include="..\Dating.Shared\Dating.Shared.csproj" />
   </ItemGroup>
 
