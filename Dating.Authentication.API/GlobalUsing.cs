@@ -1,11 +1,9 @@
-﻿global using Dating.Authentication.API.Middleware;
-global using Dating.Authentication.Application.Commands;
+﻿global using Dating.Authentication.Application.Commands;
 global using Dating.Authentication.Application.DTOs;
 global using Dating.Authentication.Application.Queries;
 global using Dating.Authentication.Infrastructure;
 global using Dating.Authentication.Infrastructure.Extensions;
 global using Dating.Shared.API.Controllers;
-global using Dating.Shared.Application.Exceptions;
-global using Microsoft.AspNetCore.Diagnostics;
+global using Dating.Shared.API.Middleware;
 global using Microsoft.AspNetCore.Mvc;
 global using Serilog;
