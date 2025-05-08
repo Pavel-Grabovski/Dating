@@ -1,4 +1,10 @@
-﻿global using MediatR;
+﻿global using System.Text;
+global using Dating.Shared.API.Middleware;
+global using Dating.Shared.Application.Exceptions;
+global using MediatR;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Diagnostics;
 global using Microsoft.AspNetCore.Mvc;
-global using Dating.Shared.Application.Exceptions;
+global using Microsoft.AspNetCore.Mvc.Authorization;
+global using Microsoft.IdentityModel.Tokens;

@@ -1,9 +1,7 @@
-﻿global using Dating.Profile.CommandService.API;
+﻿global using Dating.Profile.Application.DTOs;
+global using Dating.Profile.CommandService.Application.Commands;
+global using Dating.Shared.API;
 global using Dating.Shared.API.Controllers;
-global using Dating.Shared.Application.SQRS;
 global using Marten;
 global using Microsoft.AspNetCore.Mvc;
 global using Serilog;
-global using Dating.Shared.API.Middleware;
-global using Microsoft.AspNetCore.Authorization;
-global using Microsoft.AspNetCore.Mvc.Authorization;
