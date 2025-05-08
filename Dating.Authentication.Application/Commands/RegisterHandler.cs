@@ -1,6 +1,4 @@
-﻿using Dating.Shared.Application.SQRS;
-
-namespace Dating.Authentication.Application.Commands;
+﻿namespace Dating.Authentication.Application.Commands;
 
 public class RegisterHandler(
     UserManager<User> userManager,
