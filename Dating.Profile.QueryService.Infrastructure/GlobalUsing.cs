@@ -1,5 +1,4 @@
-﻿global using Dating.Profile.Core.Enum;
-global using Dating.Profile.QueryService.Domain.Entities;
+﻿global using Dating.Profile.Domain.Enum;
 global using Dating.Profile.QueryService.Infrastructure.Data;
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.EntityFrameworkCore;

@@ -1,2 +1,1 @@
-﻿global using Dating.Profile.Core.Enum;
-global using NetTopologySuite.Geometries;
+﻿global using NetTopologySuite.Geometries;

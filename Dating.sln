@@ -23,10 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.QueryService
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.API", "Dating.Profile.CommandService.API\Dating.Profile.CommandService.API.csproj", "{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.Infrastructure", "Dating.Profile.CommandService.Infrastructure\Dating.Profile.CommandService.Infrastructure.csproj", "{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.Core", "Dating.Profile.Core\Dating.Profile.Core.csproj", "{92874133-7CBE-4C1C-B32D-10E76725C020}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared.API", "Dating.Shared.API\Dating.Shared.API.csproj", "{6DEA7A44-2A7A-C92C-2A46-881E2B03BA37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared.Application", "Dating.Shared.Application\Dating.Shared.Application.csproj", "{9C9655B3-8300-452B-AB37-9A1CB266946F}"
@@ -81,14 +77,6 @@ Global
 		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CB153A-7ADD-4A18-9F5E-7B4A3101963A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA5222BD-DB82-4520-B4D6-9DA9D3731B66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92874133-7CBE-4C1C-B32D-10E76725C020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92874133-7CBE-4C1C-B32D-10E76725C020}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92874133-7CBE-4C1C-B32D-10E76725C020}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92874133-7CBE-4C1C-B32D-10E76725C020}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6DEA7A44-2A7A-C92C-2A46-881E2B03BA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6DEA7A44-2A7A-C92C-2A46-881E2B03BA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DEA7A44-2A7A-C92C-2A46-881E2B03BA37}.Release|Any CPU.ActiveCfg = Release|Any CPU

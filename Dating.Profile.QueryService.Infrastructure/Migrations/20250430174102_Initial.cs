@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Dating.Profile.Domain.Enum;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 

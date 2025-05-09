@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dating.Profile.Core\Dating.Profile.Core.csproj" />
     <ProjectReference Include="..\Dating.Profile.QueryService.Domain\Dating.Profile.Domain.csproj" />
   </ItemGroup>
 
