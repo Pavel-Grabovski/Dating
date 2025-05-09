@@ -1,11 +1,8 @@
-﻿namespace Dating.Shared.Events;
+﻿namespace Dating.Shared.Domain.Events;
 
 public record EventModel(
     string Id,
     DateTime CreatedAt,
-    Guid AggregateId,
-    string AggregateType,
-    int Version,
     string EventType,
     BaseEvent EventData
 );
