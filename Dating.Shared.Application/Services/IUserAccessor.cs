@@ -1,4 +1,4 @@
-﻿namespace Dating.Authentication.Application.Services;
+﻿namespace Dating.Shared.Application.Services;
 
 public interface IUserAccessor
 {

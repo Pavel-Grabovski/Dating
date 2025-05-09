@@ -1,4 +1,6 @@
-﻿namespace Dating.Shared.API;
+﻿using Dating.Shared.Application.Services;
+
+namespace Dating.Shared.API;
 
 public static class DependencyInjection
 {
