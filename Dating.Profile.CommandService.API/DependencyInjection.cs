@@ -14,14 +14,8 @@ public static class DependencyInjection
     }
 
     public static IServiceCollection AddCommandAPIServices(
-        this IServiceCollection services, IConfiguration configuration
-    )
+        this IServiceCollection services)
     {
-        var connectionString = configuration.GetConnectionString("PgConnection")!;
-        services
-            .AddMarten(opt => opt.Connection(connectionString))
-            .UseLightweightSessions();
-
         services.AddMediatR(config =>
            config.RegisterServicesFromAssembly(typeof(CreateUserProfileHandler).Assembly));
 

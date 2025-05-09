@@ -1,5 +1,9 @@
 ﻿global using System.Text.Json;
 global using Confluent.Kafka;
+global using Dating.Profile.CommandService.Infrastructure.DAO;
+global using Dating.Profile.CommandService.Infrastructure.KafkaProducer;
 global using Dating.Shared.Domain.Events;
-global using Microsoft.Extensions.Options;
 global using Marten;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Options;

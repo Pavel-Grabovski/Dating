@@ -7,8 +7,9 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         builder.AddLogger();
         builder.Services
-            .AddCommandAPIServices(builder.Configuration)
-            .AddSharedAPIServices(builder.Configuration);
+            .AddCommandAPIServices()
+            .AddSharedAPIServices(builder.Configuration)
+            .AddCommandInfrastructureServices(builder.Configuration);
 
         var app = builder.Build();
 
