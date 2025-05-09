@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Authentication.Appli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Authentication.Infrastructure", "Dating.Authentication.Infrastructure\Dating.Authentication.Infrastructure.csproj", "{18283958-3996-478E-8BAF-0B5487A227FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared", "Dating.Shared\Dating.Shared.csproj", "{264670BA-C74E-4048-A4D9-E6E1F9C385C8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.QueryService.API", "Dating.Profile.QueryService.API\Dating.Profile.QueryService.API.csproj", "{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.Domain", "Dating.Profile.QueryService.Domain\Dating.Profile.Domain.csproj", "{281CFCB0-7E86-473A-978E-588FE9504527}"
@@ -59,10 +57,6 @@ Global
 		{18283958-3996-478E-8BAF-0B5487A227FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18283958-3996-478E-8BAF-0B5487A227FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18283958-3996-478E-8BAF-0B5487A227FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{264670BA-C74E-4048-A4D9-E6E1F9C385C8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A68EA7C9-5E4A-479C-BD00-8CA874BA9AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU

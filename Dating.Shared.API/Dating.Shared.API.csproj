@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dating.Shared.Application\Dating.Shared.Application.csproj" />
-    <ProjectReference Include="..\Dating.Shared\Dating.Shared.csproj" />
   </ItemGroup>
 
 </Project>
