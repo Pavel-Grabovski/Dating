@@ -36,6 +36,9 @@ public static class DependencyInjection
         services.AddSwaggerGen();
         services.AddRouting(options => options.LowercaseUrls = true);
 
+        services.AddHttpContextAccessor();
+        services.AddScoped<IUserAccessor, UserAccessor>();
+
         return services;
     }
 

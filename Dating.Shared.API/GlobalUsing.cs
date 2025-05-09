@@ -8,3 +8,4 @@ global using Microsoft.AspNetCore.Diagnostics;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Authorization;
 global using Microsoft.IdentityModel.Tokens;
+global using Dating.Authentication.Application.Services;
