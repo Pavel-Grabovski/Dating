@@ -3,9 +3,11 @@
 public class UserController : ProfileControllerBase
 {
     [HttpPost]
-    public async Task<IResult> Create()
+    public async Task<IResult> Create(
+        [FromBody] CreateUserProfileRequestDTO dto,
+        CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Results.Ok(await Mediator.Send(new CreateUserProfileCommand(dto), cancellationToken));
     }
 
     [HttpPut]
