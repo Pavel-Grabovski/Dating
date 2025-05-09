@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared.Application",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.Application", "Dating.Profile.CommandService.Application\Dating.Profile.Application.csproj", "{3D54FDB3-BF42-42E8-88FF-289E54C9B343}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared.Domain", "Dating.Shared.Domain\Dating.Shared.Domain.csproj", "{4FAA50B4-98C0-4D05-90CC-75667F27557B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{3D54FDB3-BF42-42E8-88FF-289E54C9B343}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D54FDB3-BF42-42E8-88FF-289E54C9B343}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D54FDB3-BF42-42E8-88FF-289E54C9B343}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FAA50B4-98C0-4D05-90CC-75667F27557B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FAA50B4-98C0-4D05-90CC-75667F27557B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FAA50B4-98C0-4D05-90CC-75667F27557B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FAA50B4-98C0-4D05-90CC-75667F27557B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
