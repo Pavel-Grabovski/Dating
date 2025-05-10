@@ -46,11 +46,61 @@ services:
         networks:
             - dating-hub-network-dev
             
-    
-     
+    profile_events_db:
+        container_name: profile.events.db.dev
+        image: postgres
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=12345678
+            - POSTGRES_DB=profile-events-db
+        restart: always
+        ports:
+            - "2010:5432"
+        volumes:
+            - postgres_write_db:/var/lib/postgresql/data/
+        networks:
+            - dating-hub-network-dev
+
+    zookeeper:
+        container_name: zookeeper.dev
+        image: docker.io/bitnami/zookeeper:3.9.3
+        restart: always
+        ports:
+            - "2002:2181"
+        volumes:
+            - "zookeeper_data:/bitnami"
+        environment:
+            - ALLOW_ANONYMOUS_LOGIN=yes
+        networks:
+            - dating-hub-network-dev
+        
+    kafka:
+        container_name: kafka.dev
+        image: docker.io/bitnami/kafka:3.9.0
+        ports:
+            - "2001:9092"
+        restart: always
+        volumes:
+            - "kafka_data:/bitnami"
+        environment:
+            - ALLOW_PLAINTEXT_LISTENER=yes
+            - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper.dev:2181
+            - KAFKA_CFG_LISTENERS=PLAINTEXT://0.0.0.0:9092
+            - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:2001
+            - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
+        depends_on:
+            - zookeeper
+        networks:
+            - dating-hub-network-dev
     
 volumes:
   postgres_authentication_db:
+    driver: local
+  postgres_write_db:
+    driver: local
+  zookeeper_data:
+    driver: local
+  kafka_data:
     driver: local
 
     
