@@ -2,5 +2,6 @@
 
 public abstract class Message
 {
-    public Guid Id { get; set; }
+    //TODO решить позже надо оно или нет
+    //public Guid Id { get; set; }
 }
