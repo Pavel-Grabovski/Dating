@@ -7,7 +7,8 @@ public class UserController : ProfileControllerBase
         [FromBody] CreateUserProfileRequestDTO dto,
         CancellationToken cancellationToken)
     {
-        return Results.Ok(await Mediator.Send(new CreateUserProfileCommand(dto), cancellationToken));
+        await Mediator.Send(new CreateUserProfileCommand(dto), cancellationToken);
+        return Results.Created();
     }
 
     [HttpPut]
