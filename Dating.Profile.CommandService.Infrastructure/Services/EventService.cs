@@ -9,8 +9,8 @@ public class EventService(
     {
         var eventModel = new EventModel(
             Id: Guid.NewGuid().ToString(),
-            CreatedAt: DateTime.Now,
-            EventType: "TEST",
+            CreatedAt: DateTime.UtcNow,
+            EventType: nameof(baseEvent),
             EventData: baseEvent);
 
         await eventStorage.SaveAsync(eventModel, ct);
@@ -18,8 +18,5 @@ public class EventService(
 
         var topic = configuration.GetValue<string>("Kafka:Topic")!; 
         await eventKafkaProducer.PublishEventAsync(topic, baseEvent);
-
-
-
     }
 }

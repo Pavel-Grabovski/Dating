@@ -18,6 +18,7 @@ public class CreateUserProfileHandler(
             UserId = Guid.Parse(userId),
         };
 
+
         await eventService.SaveEventsAsync(createUserProfileEvent, cancellationToken);
 
         return new CreateUserProfileResult(true);
