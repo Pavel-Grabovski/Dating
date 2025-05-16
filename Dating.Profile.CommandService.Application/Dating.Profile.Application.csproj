@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dating.Profile.QueryService.Domain\Dating.Profile.Domain.csproj" />
     <ProjectReference Include="..\Dating.Shared.Application\Dating.Shared.Application.csproj" />
     <ProjectReference Include="..\Dating.Shared.Domain\Dating.Shared.Domain.csproj" />
   </ItemGroup>

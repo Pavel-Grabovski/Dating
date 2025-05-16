@@ -1,7 +1,5 @@
-﻿using Dating.Profile.Application.Services;
-using Dating.Shared.Domain.Events;
+﻿namespace Dating.Profile.Application.Commands.CreateUserProfile;
 
-namespace Dating.Profile.Application.Commands.CreateUserProfile;
 public class CreateUserProfileHandler(
     IUserAccessor userAccessor,
     IEventService eventService) 
@@ -16,21 +14,14 @@ public class CreateUserProfileHandler(
         CreateUserProfileEvent createUserProfileEvent = new()
         {
             UserId = Guid.Parse(userId),
+            Name = request.CreateUserProfileRequest.Name,
+            Gender = (Gender)(int)request.CreateUserProfileRequest.Gender,
+            Birthday = request.CreateUserProfileRequest.Birthday,
+            HaveChildren = request.CreateUserProfileRequest.HaveChildren
         };
-
 
         await eventService.SaveEventsAsync(createUserProfileEvent, cancellationToken);
 
         return new CreateUserProfileResult(true);
     }
-}
-
-
-public class CreateUserProfileEvent : BaseEvent
-{
-    public CreateUserProfileEvent() : base(nameof(CreateUserProfileEvent))
-    {
-    }
-
-    public Guid UserId { get; set; }
 }
