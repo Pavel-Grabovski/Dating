@@ -1,4 +1,5 @@
 ﻿global using Dating.Profile.Application.Commands.CreateUserProfile;
+global using Dating.Profile.Application.Commands.DeleteUserProfile;
 global using Dating.Profile.Application.Commands.UpdateUserProfile;
 global using Dating.Profile.Application.DTOs;
 global using Dating.Profile.CommandService.Infrastructure;

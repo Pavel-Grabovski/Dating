@@ -1,4 +1,6 @@
-﻿namespace Dating.Profile.CommandService.API.Controllers;
+﻿using Dating.Profile.Application.Commands.DeleteUserProfile;
+
+namespace Dating.Profile.CommandService.API.Controllers;
 
 public class UserController : ProfileControllerBase
 {
@@ -22,6 +24,7 @@ public class UserController : ProfileControllerBase
     [HttpDelete]
     public async Task<IResult> Delete(CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+
+        return Results.Ok(await Mediator.Send(new DeleteUserProfileCommand(), cancellationToken));
     }
 }
