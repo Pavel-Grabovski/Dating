@@ -1,6 +1,4 @@
-﻿using Dating.Shared.Domain.Events;
-
-namespace Dating.Profile.Application.Services;
+﻿namespace Dating.Profile.Application.Services;
 
 public interface IEventService
 {
