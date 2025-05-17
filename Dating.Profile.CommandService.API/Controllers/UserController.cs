@@ -12,9 +12,11 @@ public class UserController : ProfileControllerBase
     }
 
     [HttpPut]
-    public async Task<IResult> Update()
+    public async Task<IResult> Update(
+        [FromBody] UpdateUserProfileRequestDTO dto,
+        CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return Results.Ok(await Mediator.Send(new UpdateUserProfileCommand(dto), cancellationToken));
     }
 
     [HttpDelete]
