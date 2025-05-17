@@ -22,6 +22,6 @@ public class CreateUserProfileHandler(
 
         await eventService.SaveEventsAsync(createUserProfileEvent, cancellationToken);
 
-        return new CreateUserProfileResult();
+        return new CreateUserProfileResult(true);
     }
 }

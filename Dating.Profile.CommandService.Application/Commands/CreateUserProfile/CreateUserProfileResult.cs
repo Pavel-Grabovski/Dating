@@ -1,3 +1,3 @@
 ﻿namespace Dating.Profile.Application.Commands.CreateUserProfile;
 
-public record CreateUserProfileResult();
+public record CreateUserProfileResult(bool isSuccess);

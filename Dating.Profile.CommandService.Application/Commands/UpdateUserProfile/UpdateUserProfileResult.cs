@@ -1,3 +1,3 @@
 ﻿namespace Dating.Profile.Application.Commands.UpdateUserProfile;
 
-public record UpdateUserProfileResult();
+public record UpdateUserProfileResult(bool isSuccess);

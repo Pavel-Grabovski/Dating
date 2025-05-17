@@ -22,7 +22,7 @@ public class UpdateUserProfileHandler(
 
         await eventService.SaveEventsAsync(updateUserProfileEvent, cancellationToken);
 
-        return new UpdateUserProfileResult();
+        return new UpdateUserProfileResult(true);
     }
 }
 
