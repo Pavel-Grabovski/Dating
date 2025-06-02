@@ -1,4 +1,4 @@
-﻿namespace Dating.Profile.Domain.Enum;
+﻿namespace Dating.Shared.Domain.Enums;
 
 public enum Gender
 {

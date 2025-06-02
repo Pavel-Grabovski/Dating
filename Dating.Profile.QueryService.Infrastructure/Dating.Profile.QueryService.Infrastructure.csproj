@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dating.Profile.QueryService.Domain\Dating.Profile.Domain.csproj" />
+    <ProjectReference Include="..\Dating.Shared.Domain\Dating.Shared.Domain.csproj" />
   </ItemGroup>
 
 </Project>

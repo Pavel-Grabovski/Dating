@@ -1,6 +1,4 @@
-﻿using Dating.Profile.Domain.Enum;
-
-namespace Dating.Profile.Domain.Entities;
+﻿namespace Dating.Profile.Domain.Entities;
 
 public class UserProfile
 {
