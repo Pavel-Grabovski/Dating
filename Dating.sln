@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Shared.Domain", "Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.Infrastructure", "Dating.Profile.CommandService.Infrastructure\Dating.Profile.CommandService.Infrastructure.csproj", "{C724C96A-1C8C-4C69-9144-B0BE312D579D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dating.Profile.CommandService.Domain", "Dating.Profile.CommandService.Domain\Dating.Profile.CommandService.Domain.csproj", "{9F52C78D-278F-43E1-AB1A-B72D8383EEDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{C724C96A-1C8C-4C69-9144-B0BE312D579D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C724C96A-1C8C-4C69-9144-B0BE312D579D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C724C96A-1C8C-4C69-9144-B0BE312D579D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F52C78D-278F-43E1-AB1A-B72D8383EEDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F52C78D-278F-43E1-AB1A-B72D8383EEDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F52C78D-278F-43E1-AB1A-B72D8383EEDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F52C78D-278F-43E1-AB1A-B72D8383EEDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
